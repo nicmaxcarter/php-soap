@@ -1,0 +1,96 @@
+
+
+
+//////////////////////////////////////////////////////////////////////
+THIS ONE WORKS
+//////////////////////////////////////////////////////////////////////
+
+<soapenv:Envelope 
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+xmlns:web="http://websvcs.qtracswebws">
+    <soapenv:Header>
+        <wsse:Security soapenv:mustUnderstand="1" 
+        xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" 
+        xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+            <wsse:UsernameToken wsu:Id="UsernameToken-588BEC6977E8F42C5D15470612503322">
+                <wsse:Username>max@CDSTTRANSP</wsse:Username>
+                <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">FedEx19$</wsse:Password>
+                <wsu:Created>2019-01-09T19:14:10.331Z</wsu:Created>
+            </wsse:UsernameToken>
+        </wsse:Security>
+    </soapenv:Header>
+    <soapenv:Body>
+        <web:exportVehicleIdentification>
+            <companyId>CDSTTRANSP</companyId>
+            <vehicle>
+                <id></id>
+                <scac></scac>
+            </vehicle>
+            <numOfVehicles>45</numOfVehicles>
+        </web:exportVehicleIdentification>
+    </soapenv:Body>
+</soapenv:Envelope>
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////
+THIS ONE DOES NOT
+//////////////////////////////////////////////////////////////////////
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope 
+xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+xmlns:ns1="http://websvcs.qtracswebws" 
+xmlns:ns2="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+<SOAP-ENV:Header>
+        <wsse:Security SOAP-ENV:mustUnderstand="1" 
+        xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" 
+        xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <wsse:UsernameToken>
+            <wsse:Username>max@CDSTTRANSP</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">FedEx19$</wsse:Password>
+        </wsse:UsernameToken>
+    </wsse:Security>
+</SOAP-ENV:Header>
+<SOAP-ENV:Body>
+      <ns1:exportVehicleIdentification>
+        <companyId>CDSTTRANSP</companyId>
+        <vehicle>
+           <id></id>
+           <scac></scac>
+        </vehicle>
+        <numOfVehicles>45</numOfVehicles>
+      </ns1:exportVehicleIdentification>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope 
+xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+xmlns:ns1="http://websvcs.qtracswebws" 
+xmlns:ns2="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+<SOAP-ENV:Header>
+        <wsse:Security SOAP-ENV:mustUnderstand="1" 
+        xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" 
+        xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <wsse:UsernameToken>
+            <wsse:Username>max@CDSTTRANSP</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">FedEx19$</wsse:Password>
+        </wsse:UsernameToken>
+    </wsse:Security>
+</SOAP-ENV:Header>
+<SOAP-ENV:Body>
+
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

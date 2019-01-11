@@ -1,0 +1,1 @@
+SoapHeader::SoapHeader ( string $namespace , string $name [, mixed $data [, bool $mustunderstand = FALSE [, string $actor ]]] )
